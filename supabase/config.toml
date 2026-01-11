@@ -1,0 +1,46 @@
+project_id = "kqezxvivoddnqmylsuwd"
+
+[functions.send-teacher-reminders]
+verify_jwt = false
+
+[functions.verify-student-code]
+verify_jwt = false
+
+[functions.send-parent-magic-link]
+verify_jwt = false
+
+[functions.parent-login-email]
+verify_jwt = false
+
+[functions.complete-parent-registration]
+verify_jwt = false
+
+[functions.address-lookup]
+verify_jwt = false
+
+[functions.register-student]
+verify_jwt = false
+
+[functions.register-hifz-student]
+verify_jwt = false
+
+[functions.notify-new-registration]
+verify_jwt = false
+
+[functions.send-registration-confirmation]
+verify_jwt = false
+
+[functions.get-public-events]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.send-payment-link]
+verify_jwt = false
+
+[functions.send-payment-notification]
+verify_jwt = false
+
+[functions.send-payment-confirmation]
+verify_jwt = false

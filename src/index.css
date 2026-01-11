@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-first optimizations */
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Android/Samsung optimization - narrower screens need tighter spacing */
+@media (max-width: 380px) {
+  .android-friendly {
+    @apply px-2;
+  }
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 30% 98%;
+    --foreground: 210 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    --primary: 184 91% 17%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 210 24% 16%;
+
+    --muted: 210 30% 94%;
+    --muted-foreground: 210 16% 46%;
+
+    --accent: 184 65% 88%;
+    --accent-foreground: 184 91% 17%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 184 91% 17%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Pink accents for Girls Maktab in dark mode */
+  [data-theme="pink"].dark {
+    --primary: 340 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 340 50% 30%;
+    --accent-foreground: 340 70% 85%;
+    --ring: 340 70% 65%;
+  }
+
+  /* Pale Pink Theme for Girls Maktab (Light) */
+  [data-theme="pink"]:not(.dark) {
+    --background: 330 60% 98%;
+    --foreground: 330 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 330 30% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 30% 20%;
+
+    --primary: 340 82% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 50% 96%;
+    --secondary-foreground: 330 30% 20%;
+
+    --muted: 330 50% 96%;
+    --muted-foreground: 330 20% 50%;
+
+    --accent: 340 100% 95%;
+    --accent-foreground: 340 82% 67%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 330 35% 92%;
+    --input: 330 35% 92%;
+    --ring: 340 82% 67%;
+  }
+
+  .dark {
+    --background: 210 24% 10%;
+    --foreground: 210 30% 98%;
+
+    --card: 210 24% 12%;
+    --card-foreground: 210 30% 98%;
+
+    --popover: 210 24% 12%;
+    --popover-foreground: 210 30% 98%;
+
+    --primary: 184 65% 88%;
+    --primary-foreground: 184 91% 17%;
+
+    --secondary: 210 24% 16%;
+    --secondary-foreground: 210 30% 98%;
+
+    --muted: 210 24% 16%;
+    --muted-foreground: 210 16% 66%;
+
+    --accent: 184 91% 17%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 210 24% 20%;
+    --input: 210 24% 20%;
+    --ring: 184 65% 88%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer base {
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-weight: 600;
+  }
+}
