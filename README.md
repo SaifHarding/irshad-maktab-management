@@ -2,7 +2,7 @@
 
 ## 📚 Overview
 
-A student management system for Masjid Irshad Luton maktabs and madrasahs that centralizes student records, attendance, academic progress, and payments. The platform supports multiple curriculum tracks (Qaidah, Quran, Hifz), role-based access for admins, teachers, and parents, and provides parents with clear visibility into progress and attendance—reducing administrative overhead and replacing paper-based workflows.
+A student management system for Islamic madrasahs and maktabs that centralizes student records, attendance, academic progress, and payments. The platform supports multiple curriculum tracks (Qaidah, Quran, Hifz), role-based access for admins, teachers, and parents, and provides parents with clear visibility into progress and attendance—reducing administrative overhead and replacing paper-based workflows.
 
 ---
 
